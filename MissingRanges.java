@@ -12,7 +12,7 @@ public class MissingRanges {
         List<String> ranges = new ArrayList<>();
         int previousNumber = start - 1;
         for (int i = 0; i <= values.length; i++) {
-            int current = values[i];
+            int current = (i == values.length) ? (end + 1) : values[i];
             if (i == values.length) {
                 current = end + 1;
             }

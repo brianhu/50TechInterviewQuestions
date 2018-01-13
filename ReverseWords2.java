@@ -10,7 +10,7 @@ public class ReverseWords2 {
         // "eulb si yks eht"
         int i = 0;
         for (int j = 0; j <= s.length; j++) {
-            if (s[j] == ' ' || j == s.length) {
+            if ( j == s.length || s[j] == ' ') {
                 // "eulb "
                 reverse(s, i, j - 1);
                 // "blue"
@@ -22,7 +22,7 @@ public class ReverseWords2 {
 
     private void reverse(char[] s, int begin, int end) {
         // "the sky is blue"
-        for (int i = 0; i < (end - begin) / 2; i++) {
+        for (int i = 0; i <= (end - begin) / 2; i++) {
             char temp = s[begin + i];
             // temp = t
             s[begin + i] = s[end - i];
